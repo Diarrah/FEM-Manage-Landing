@@ -81,8 +81,8 @@ body::after {
     color: #fff;
     border: none;
     border-radius: 100px;
-    padding: 9px 25px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25) ;
+    padding: 9px 25px 12px;
+    box-shadow: 0px 7px 10px hsla(12, 88%, 59%, 0.4) ;
     cursor: pointer;
 }
 
@@ -108,10 +108,8 @@ h1 { font-size: 3rem; }
 
 h2 { font-size: 2.3rem; }
 
-.main-different-text,
+.different-text,
 .attributes-container { width: 45%; }
-
-.attribute-heading { display: flex; }
 
 .number {
     background-color: var(--orange);
@@ -124,11 +122,11 @@ h2 { font-size: 2.3rem; }
     letter-spacing: 1px;
 }
 
-.attribute { margin-bottom: 30px; }
+.attribute { margin-bottom: 40px; }
 
 .attribute p {
     position: relative;
-    left: 75px; bottom: -8px;
+    left: 75px; bottom: -15px;
     padding-right: 70px;
 }
 
@@ -136,6 +134,8 @@ h2 { font-size: 2.3rem; }
 .testimonials__section { 
     padding: 100px 0;
     text-align: center; }
+
+.testimonials__section h2 { margin-bottom: 20px; }
 
 .testimonials-container { 
     width: 150vw;
@@ -197,30 +197,28 @@ h5 { padding: 15px 0; }
 }
 
 /* First Section */
-.social-section {
+.f-section-1 {
     flex-direction: column;
     align-items: flex-start;
 }
 
 .social__icons { width: 170px; }
+.social__icons span { display: none; }
 
 .social__icons i { font-size: 20px; }
 .social__icons i:hover { color: var(--orange); }
 
-.social__icons span { display: none; }
-
-
 /* Second Section */
-.resource__links ul { margin-bottom: -15px; }
+.f-section-2 ul { margin-bottom: -15px; }
 
-.resource__links li { 
+.f-section-2 li { 
     font-style: 14px;
     margin-bottom: 15px; 
 }
-.resource__links li:hover { color: var(--orange); }
+.f-section-2 li:hover { color: var(--orange); }
 
 /* Third Section */
-.footer__form {
+.f-section-3 {
     flex-direction: column;
     text-align: right;
 }
@@ -235,14 +233,15 @@ h5 { padding: 15px 0; }
     border-radius: 50px;
     font-family: inherit;
     width: 75%; height: 40px;
-    padding-left: 15px;
-}
-
+    padding-left: 15px; }
 .form-control input:focus { outline: none; }
 
-.form-control .btn { height: 40px; }
+.form-control .btn { 
+    height: 40px; 
+    box-shadow: none;
+}
 
-.errorMsg {
+.form-control small {
     position: absolute;
     left: 30px; bottom: -20px;
     color: var(--orange);
@@ -250,5 +249,10 @@ h5 { padding: 15px 0; }
     font-size: 70%;
     display: none;
 }
+
+/* JS Form Validation Classes */
+.form-control.error input { border: 1px solid var(--orange); }
+.form-control.error small { display: block; }
+/* -------------------------- */
 
 .copyright { font-size: 80%; }
