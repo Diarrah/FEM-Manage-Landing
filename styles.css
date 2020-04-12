@@ -251,7 +251,9 @@ h5 { padding: 15px 0; }
 }
 
 /* JS Form Validation Classes */
-.form-control.error input { border: 1px solid var(--orange); }
+.form-control.error input { 
+    color: var(--orange);
+    border: 1px solid var(--orange); }
 .form-control.error small { display: block; }
 /* -------------------------- */
 
