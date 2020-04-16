@@ -286,15 +286,11 @@ h5 {
     }
 
     /* Third Section */
-    .f-section-3 {
-        justify-content: center;
-    }
-
       .form-control {
         position: relative;
         display: block;
         height: 60px; width: 100%;
-        text-align: center;
+        text-align: right;
     }
 
     .form-control input {
@@ -479,6 +475,7 @@ h5 {
         justify-content: space-evenly;
     }
 
+    .form-control { text-align: center; }
     .form-control small { left: 12%; }
     .form-control .btn { padding: 9px 25px 12px; }
 }
