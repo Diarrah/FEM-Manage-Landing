@@ -27,7 +27,6 @@ a {
 
 :root {
     --orange: hsl(12, 88%, 59%);
-    --dark-blue: hsl(228, 39%, 23%);
     --dark-grayish-blue: hsl(227, 12%, 61%);
     --very-dark-blue: hsl(233, 12%, 13%);
     --very-light-gray: hsl(0, 0%, 98%);
@@ -78,7 +77,7 @@ body::after {
 .mobile-nav { 
     display: none;
     border: none;
-    background-color: transparent; 
+    z-index: 5;
 }
 .close-out { display: none; }
 
@@ -357,10 +356,6 @@ h5 {
     .f-section-2 li {
         font-size: 13px;
     }
-
-    .form-control input {
-        font-size: 80%;
-    }
 }
 
 @media screen and (max-width: 830px) {
@@ -379,6 +374,22 @@ h5 {
     .show .hamburger { display: none; }
     .show .close-out { display: block; }
     .show .navbar__links { transform: translateY(0); }
+
+    .show .mobile-nav {
+        background-color: #fff;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+    }
+    
+    .show .mobile-nav-overlay {
+        position: absolute;
+        top:0; bottom: 0; left: 0; right: 0;
+        height: 500vh; width: 100vw;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 3;
+        transition: .8s ease;
+    }
     /* ----------------------------------- */
 
     .navbar__links {
@@ -476,7 +487,7 @@ h5 {
     }
 
     .form-control { text-align: center; }
-    .form-control small { left: 12%; }
+    .form-control small { left: 15%; }
     .form-control .btn { padding: 9px 25px 12px; }
 }
 
