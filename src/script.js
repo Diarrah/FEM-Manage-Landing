@@ -1,4 +1,4 @@
-/* Form Validation */
+/*------------- Form Validation -----------------*/
 let form = document.querySelector('.form-control'),
     email = form.querySelector('input'),
     error = form.querySelector('small');
@@ -19,8 +19,17 @@ form.addEventListener('submit', (e) => {
    }
 });
 
-/* ------ RegEx copied from StackOverflow ------ */
 function validateEmail(email) {
     let valid = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return valid.test(String(email).toLowerCase());
 }
+
+
+/* ------------- Mobile Nav Toggle -------------------- */
+let { body } = document;
+let mobile_nav = document.querySelector('.mobile-nav');
+
+mobile_nav.addEventListener('click', (e) => {
+    e.preventDefault();
+    body.classList.toggle('show');
+})
