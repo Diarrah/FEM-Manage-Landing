@@ -200,7 +200,7 @@ h5 {
 .swiper-pagination-bullet {
     height: 10px; width: 10px;
     background-color: transparent;
-    border: 0.5px solid var(--orange);
+    border: 1px solid var(--orange);
 }
 
 .swiper-pagination-bullet-active {
