@@ -1,6 +1,7 @@
 let swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 0,
+    simulateTouch: false,
     breakpoints: {
       550: {
         slidesPerView: 2,
@@ -12,6 +13,9 @@ let swiper = new Swiper('.swiper-container', {
       }
     },
     loop: true,
+    keyboard: {
+      enabled: true,
+    },
     pagination: {
       el: '.swiper-pagination',
       centeredSlides: true,
